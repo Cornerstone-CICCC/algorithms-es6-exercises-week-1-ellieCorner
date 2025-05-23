@@ -26,3 +26,68 @@ var shirtSleeve = 8.47; // size M (medium)
 Then print N/A to the console because the measurements don't all match up with one particular size.
 
 */
+
+function printSize(shirtWidth, shirtLength, shirtSleeve) {
+  let size = "N/A";
+
+  if (
+    shirtWidth >= 17 &&
+    shirtWidth <= 19 &&
+    shirtLength >= 27 &&
+    shirtLength <= 29 &&
+    shirtSleeve >= 8.0 &&
+    shirtSleeve <= 8.25
+  ) {
+    size = "S";
+  } else if (
+    shirtWidth >= 19 &&
+    shirtWidth <= 21 &&
+    shirtLength >= 28 &&
+    shirtLength <= 30 &&
+    shirtSleeve >= 8.26 &&
+    shirtSleeve <= 8.5
+  ) {
+    size = "M";
+  } else if (
+    shirtWidth >= 21 &&
+    shirtWidth <= 23 &&
+    shirtLength >= 29 &&
+    shirtLength <= 31 &&
+    shirtSleeve >= 8.51 &&
+    shirtSleeve <= 8.75
+  ) {
+    size = "L";
+  } else if (
+    shirtWidth >= 23 &&
+    shirtWidth <= 25 &&
+    shirtLength >= 30 &&
+    shirtLength <= 32 &&
+    shirtSleeve >= 8.76 &&
+    shirtSleeve <= 9.0
+  ) {
+    size = "XL";
+  } else if (
+    shirtWidth >= 25 &&
+    shirtWidth <= 27 &&
+    shirtLength >= 32 &&
+    shirtLength <= 34 &&
+    shirtSleeve >= 9.5 &&
+    shirtSleeve <= 9.75
+  ) {
+    size = "2XL";
+  } else if (
+    shirtWidth >= 27 &&
+    shirtWidth <= 29 &&
+    shirtLength >= 33 &&
+    shirtLength <= 35 &&
+    shirtSleeve >= 10.0 &&
+    shirtSleeve <= 10.25
+  ) {
+    size = "3XL";
+  }
+
+  return size;
+}
+
+console.log(printSize(23, 30, 8.71));
+console.log(printSize(18, 29, 8.47));
