@@ -9,3 +9,14 @@ A factorial is calculated by multiplying a number by all the numbers below it. F
 
 Save your final answer in a variable called solution and print it to the console.
 */
+
+function factorial(num) {
+  if (num <= 1) return 1;
+
+  return num * factorial(num - 1);
+}
+
+console.log(factorial(3));
+console.log(factorial(4));
+console.log(factorial(5));
+console.log(factorial(12));
