@@ -15,3 +15,18 @@ Use the eatsPlants and eatsAnimals variables to test your code.
 
 If eatsPlants equals true and eatsAnimals equals false, then herbivore should be printed to the console. 
 */
+
+function printAnimals(canEatPlants, canEatAnimal) {
+  return canEatPlants && !canEatAnimal
+    ? "herbivore"
+    : !canEatPlants && canEatAnimal
+    ? "carnivore"
+    : canEatPlants && canEatAnimal
+    ? "omnivore"
+    : "undefined";
+}
+
+console.log(printAnimals(true, false));
+console.log(printAnimals(true, true));
+console.log(printAnimals(false, true));
+console.log(printAnimals(false, false));
