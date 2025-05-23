@@ -8,3 +8,9 @@ while (x >= 1) {
 }
 
 */
+
+let x = 9;
+for (let i = x; i >= 1; i--) {
+  console.log("hello " + x);
+  x = x - 1;
+}
